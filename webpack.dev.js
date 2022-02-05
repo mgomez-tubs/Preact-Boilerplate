@@ -6,11 +6,11 @@ module.exports = merge(common, {
   mode: "development",
   devtool: "eval",
   output: {
+    // No need to specify path, since we are using devServer
+    // Leaving the names equal for consistency
+    // The served files can be found at http://localhost:8080/webpack-dev-server (set your port if necessary)
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "build"),
     assetModuleFilename: "images/[hash][ext][query]",
-    clean: true,
-    pathinfo: false,
   },
   plugins: [],
   devServer: {
@@ -18,14 +18,10 @@ module.exports = merge(common, {
     client: {
       logging: "warn",
     },
-    static: {
-      directory: path.join(__dirname, "dist"),
-    },
   },
   optimization: {
     runtimeChunk: true,
-    removeAvailableModules: false,
+    usedExports: true,
     removeEmptyChunks: false,
-    splitChunks: false,
   },
 });
