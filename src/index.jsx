@@ -7,4 +7,4 @@ import { render } from "preact";
 import App from "./App.jsx";
 
 // Inject the main component into a DOM node (same as React)
-render(<App />, document.getElementById("root"));
+render(<App />, document.getElementById("app-root"));
