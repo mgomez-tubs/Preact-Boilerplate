@@ -52,7 +52,11 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ title: "Preact App", template: "src/index.html" }),
+    new HtmlWebpackPlugin({
+      title: "Preact App",
+      template: "src/index.html",
+      inject: "body",
+    }),
   ],
   resolve: {
     extensions: [".jsx", ".js"],
