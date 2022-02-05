@@ -7,15 +7,17 @@ module.exports = merge(common, {
   devtool: "source-map",
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "images/[hash][ext][query]",
     clean: true,
-    pathinfo: false,
   },
   plugins: [],
   optimization: {
-    sideEffects: true,
+    runtimeChunk: true,
     usedExports: true,
     minimize: true,
+    splitChunks: {
+      chunks: "all",
+    },
   },
 });
