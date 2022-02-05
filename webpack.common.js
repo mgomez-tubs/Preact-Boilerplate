@@ -6,11 +6,12 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
         include: [path.resolve(__dirname, "src/")],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.s[ac]ss$/i,
+        include: [path.resolve(__dirname, "src/")],
         use: [
           // Creates `style` nodes from JS strings
           "style-loader",
@@ -20,13 +21,10 @@ module.exports = {
           "sass-loader",
         ],
         include: [path.resolve(__dirname, "src/")],
-        exclude: /node_modules/,
       },
       {
         test: /\.(png|svg|jpe?g|gif)$/i,
         type: "asset/resource",
-        include: [path.resolve(__dirname, "src/")],
-        exclude: /node_modules/,
       },
       {
         test: /\.(js|jsx)$/,
