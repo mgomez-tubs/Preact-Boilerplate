@@ -5,6 +5,7 @@ if (process.env.NODE_ENV === "development") {
 
 import { render } from "preact";
 import App from "./App.jsx";
+import "./sass/main.scss";
 
 // Inject the main component into a DOM node (same as React)
 render(<App />, document.getElementById("app-root"));
