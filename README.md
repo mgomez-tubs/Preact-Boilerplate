@@ -5,6 +5,7 @@ Very simple Preact boilerplate with development server HMR.
 ### Features
 - Scss/ Sass support
 - Webpack 5, with separate configuration files for production and development (using webpack-merge).
+- Browserslist
 
 ### Usage
 - Don't forget to install all dependencies first.
