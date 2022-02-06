@@ -1,10 +1,11 @@
 # Simple Preact Boilerplate
 
-Very simple Preact boilerplate with development server HMR.
+Simple Preact boilerplate with development server HMR.
+Webpack configuration is purposely kept to a minimum.
 
 ### Features
 
-- Scss/ Sass support
+- SCSS/ SASS support
 - Webpack 5, with separate configuration files for production and development (using webpack-merge).
 - index.html generated through HTMLWebpackPlugin.
 - Browserslist
