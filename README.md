@@ -1,4 +1,4 @@
-# Simple Preact Boilerplate
+# Simple Preact Boilerplate (JS)
 
 Simple Preact boilerplate with development server HMR.
 Webpack configuration is purposely kept to a minimum.
